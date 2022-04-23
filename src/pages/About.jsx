@@ -1,4 +1,4 @@
-function Home() {
+function About() {
     return(
         <div>
             notfound
@@ -6,4 +6,4 @@ function Home() {
     )
 }
 
-export default Home
+export default About
