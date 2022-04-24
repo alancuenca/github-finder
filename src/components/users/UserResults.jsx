@@ -1,4 +1,22 @@
+import { useEffect } from 'react'
+
 function UserResults() {
+    useEffect(() => {
+        fetchUsers()
+    }, []) //empty array because we don't have any dependencies
+
+    const fetchUsers = async () => {
+        const response = await fetch(`${process.env.REACT_APP_GITHUB_URL}/users`,
+            {
+                headers: {
+                    Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+                },
+            }) // END fetch
+            const data = await response.json()
+
+            console.log (data)
+    }
+
     return <div>user results</div>
 }
 
