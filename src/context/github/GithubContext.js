@@ -30,7 +30,7 @@ export const GithubProvider = ({ children }) => {
             })
         // END fetch
 
-        const {items} = await response.json()
+        const { items } = await response.json()
 
         //dispatch to githubReducer
         dispatch({
@@ -38,6 +38,10 @@ export const GithubProvider = ({ children }) => {
             payload: items, //items we get from api https://api.github.com/search/users?q=searchedname
         })
     }
+
+    // Clear users from state
+    const clearUsers = () => dispatch({type: 'CLEAR_USERS'})
+
     // Set Loading then we can call this function -> see line 18
     const setLoading = () => dispatch({ type: 'SET_LOADING' })
 
@@ -45,7 +49,8 @@ export const GithubProvider = ({ children }) => {
         <GithubContext.Provider value={{
             users: state.users, //line 15
             loading: state.loading,
-            searchUsers
+            searchUsers,
+            clearUsers
         }}>
             {children}
         </GithubContext.Provider>
