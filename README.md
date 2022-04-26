@@ -1,6 +1,6 @@
 Github Finder
 
-In this app we are creating a simple app that uses Githubs api to search for users.
+In this app we are creating a simple app that uses Githubs api to search for users and go to their github page.
 
 The goal of this app is to properly use a public api to display the data we want. The second goal is to properly use tailwind.css and daisy.ui to style our page. 
 
