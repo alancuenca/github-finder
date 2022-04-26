@@ -3,7 +3,7 @@ const githubReducer = (state, action) => {
         case 'GET_USERS':
             return {
                 ...state, //spread what's already in the state then we update with... ->
-                users: action.payload, //we're using 'payload' as convention but can also use .users i.e. 'action.users' in githubContext for testing
+                users: action.payload, //we're using 'payload' as convention but can also use .users i.e. 'action.users' in githubContext
                 loading: false,
             }
         case 'SET_LOADING':
