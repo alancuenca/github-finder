@@ -5,7 +5,7 @@ function About() {
             <p className='mb-4 text-2xl font-light'>
         Search GitHub profiles and see profile details. 
         <br></br>
-        <a href='https://github.com/alancuenca'>
+        <a href='https://github.com/alancuenca/github-finder'>
           {' '}
           Link to the github repo.
         </a>
