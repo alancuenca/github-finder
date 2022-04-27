@@ -94,13 +94,11 @@ export const GithubProvider = ({ children }) => {
 
     // Set Loading then we can call this function -> see line 18
     const setLoading = () => dispatch({ type: 'SET_LOADING' })
-
+    // We're using spread operator on state and just dispatch from the component
     return (
         <GithubContext.Provider value={{
-            users: state.users, //line 15
-            loading: state.loading,
-            user: state.user,
-            repos: state.repos,
+            ...state,
+            dispatch,
             searchUsers,
             getUser,
             clearUsers,
